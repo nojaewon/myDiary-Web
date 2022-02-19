@@ -1,0 +1,35 @@
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content .wrap {
+    width: 70%;
+    height: 70%;
+}
+
+form fieldset {
+    padding: 10px;
+}
+
+form legend {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+form li {
+    list-style: none;
+    padding: 10px;
+}
+
+form textarea {
+    width: 100%;
+}
+
+form input[type="submit"] {
+    padding: 5px;
+    background-color: lightpink;
+    font-weight: bold;
+    margin-left: 10px;
+}

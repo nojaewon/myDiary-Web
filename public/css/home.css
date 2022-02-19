@@ -1,0 +1,10 @@
+#content .title {
+    margin-top: 200px;
+    text-align: center;
+}
+#content a.create {
+    display: block;
+    margin-top: 50px;
+    text-align: center;
+    color: #000 ;
+}

@@ -1,0 +1,19 @@
+extend ./main_template.pug
+
+block style
+    include ../css/create.css
+
+block content 
+    div(class="wrap")
+        form(action="/create_process" method="post")
+            fieldset 
+                legend @Fill Your Day@
+                ul 
+                    li
+                        label(for="title")
+                        input(name="title" type="text" id="title" placeholder="title")
+                    li
+                        label(for="description")
+                        textarea(name="content" id="description" cols="30" rows="10")
+                    
+                input(type="submit" value="Create Diray")

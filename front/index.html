@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrap" class="clearfix">
+        <header id="header"></header>
+        <aside id="side">
+            <ul class="menu">
+                <li>
+                    <a href="#">diary title1</a>
+                </li>
+                <li>
+                    <a href="#">diary title2</a>
+                </li>
+                <li>
+                    <a href="#">diary title3</a>
+                </li>
+            </ul>
+        </aside>
+        <section id="content">
+            <!-- <h2 class="title">welcome my Diary!</h2>
+            <a href="#" class="create">create</a> -->
+            <div class="wrap">
+                <form action="/create_process" method="post">
+                    
+                    <fieldset>
+                        <legend>@Fill your Day@</legend>
+                        <ul>
+                            <li>
+                                <label for="title"></label>
+                                <input id="title" type="text" title="title" placeholder="title">
+                            </li>
+                            <li>
+                                <label for="description"></label>
+                                <textarea name="" id="description" cols="30" rows="10" ></textarea>
+
+                            </li>
+                            <li>
+                                <input type="submit" value="Create Diary">
+                            </li>
+                        </ul>
+                    </fieldset>
+                    
+                    
+                </form>
+            </div>
+
+
+        </section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

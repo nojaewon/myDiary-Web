@@ -1,0 +1,25 @@
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content .wrap {
+    width: 70%;
+    height: 70%;
+    position: relative;
+}
+
+.wrap .title {
+    margin-bottom: 10px;
+}
+
+.wrap .description {
+    margin-top: 5px;
+}
+
+.wrap input[type="submit"]{
+    position: absolute;
+    bottom: 0; right: 0;
+    padding: 3px;
+}

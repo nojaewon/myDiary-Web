@@ -1,0 +1,12 @@
+extend ./main_template.pug
+
+block style
+    include ../css/read.css
+
+block content 
+    .wrap
+        h2(class="title") #{curDiary.title} 
+        p(class="description") #{curDiary.content}
+        form(action="/delete_process" method="post")
+            input(type="hidden" name= "diaryId" value=`${curDiary.id}`)
+            input(type="submit" value="Delete")

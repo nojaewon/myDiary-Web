@@ -26,7 +26,7 @@
         <section id="content">
             <!-- <h2 class="title">welcome my Diary!</h2>
             <a href="#" class="create">create</a> -->
-            <div class="wrap">
+            <!-- <div class="wrap">
                 <form action="/create_process" method="post">
                     
                     <fieldset>
@@ -49,6 +49,19 @@
                     
                     
                 </form>
+            </div> -->
+
+            <div class="wrap">
+                <h2 class="title">title</h2><hr>
+                <p class="description">The first parameter of this function is the name of the URL parameter that should be captured, the second parameter can be any JavaScript object which might be used for returning the middleware implementation.
+
+                    The middleware returned by the function decides the behavior of what happens when a URL parameter is captured.
+                    
+                    In this example, the app.param(name, callback) signature is modified to app.param(name, accessId). Instead of accepting a name and a callback, app.param() will now accept a name and a number.</p>
+                <form action="/delete_process">
+                    <input type="hidden" name="diaryId">
+                    <input type="button" value="Delete">
+                </form>        
             </div>
 
 

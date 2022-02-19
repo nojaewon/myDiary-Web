@@ -18,7 +18,7 @@ html(lang="en")
                 ul.menu
                     each i in diary 
                         li
-                            a(href="#") #{i.title}
+                            a(href=`/diary/${i.id}`) #{i.title}
             section#content
                 block content
             footer#footer

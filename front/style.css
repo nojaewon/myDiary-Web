@@ -55,8 +55,24 @@
 #content .wrap {
     width: 70%;
     height: 70%;
+    position: relative;
 }
 
+.wrap .title {
+    margin-bottom: 10px;
+}
+
+.wrap .description {
+    margin-top: 5px;
+}
+
+.wrap input[type="button"]{
+    position: absolute;
+    bottom: 0; right: 0;
+    padding: 3px;
+}
+
+/* 
 form fieldset {
     padding: 10px;
 }
@@ -79,7 +95,7 @@ form input[type="submit"] {
     padding: 5px;
     background-color: lightpink;
     font-weight: bold;
-}
+} */
 
 /* #content .wrap .title {
     margin-top: 200px;

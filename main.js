@@ -5,6 +5,7 @@ const fs = require('fs');
 const pug = require('pug');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
+const { abort } = require('process');
 
 let db = mysql.createConnection({
     host: 'localhost',
@@ -27,7 +28,6 @@ app.get('/', function(req, res){
 
         res.send(renderedPug);
     })
-    
 });
 
 app.get('/create', function(req, res){
@@ -41,8 +41,30 @@ app.get('/create', function(req, res){
 
 app.post('/create_process', function(req, res){
     db.query('INSERT INTO diary(title, content, created, author_id) VALUES (?, ?, NOW(), 4)', [req.body.title, req.body.content], function(err, result){
+        if(err) {throw err;}
         res.redirect('/');
     });
+});
+
+app.post('/delete_process', function(req, res){
+    db.query('DELETE FROM diary WHERE id=?', [req.body.diaryId], function(err, result){
+        if(err) {throw err;}
+        console.log(req.body.diaryId);
+        res.redirect('/');
+    })
+})
+
+app.get('/diary/:diaryId', function(req, res){
+    db.query('SELECT * FROM diary', function(err, data){
+        if(err){throw err;}
+        let renderedPug;
+        data.forEach(diary => {
+            if(diary.id == req.params.diaryId){
+                renderedPug = pug.renderFile('./public/template/read.pug', {diary: data, curDiary: diary});
+            }
+        });
+        res.send(renderedPug);
+    })
 });
 
 app.listen(port, function(){

@@ -18,6 +18,17 @@
     margin-top: 5px;
 }
 
+.wrap .update {
+    display: block;
+    padding: 2px;
+    background-color: #eee;
+    position: absolute;
+    bottom: 0; right: 60px;
+    text-decoration: none;
+    color: #000; font-size: 15px;
+    border: 1px solid black;
+}
+
 .wrap input[type="submit"]{
     position: absolute;
     bottom: 0; right: 0;

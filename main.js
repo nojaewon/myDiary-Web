@@ -46,6 +46,27 @@ app.post('/create_process', function(req, res){
     });
 });
 
+app.get('/update/:diaryId', function(req, res){
+    db.query('SELECT * FROM diary', [req.params.diaryId], function(err, data){
+        if(err){ throw err; }
+
+        let renderedPug;
+        data.forEach(diary => {
+            if(diary.id == req.params.diaryId){
+                renderedPug = pug.renderFile('./public/template/update.pug', {diary: data, curDiary: diary});
+            }
+        });
+        res.send(renderedPug);
+    });
+});
+
+app.post('/update_process', function(req, res){
+    db.query('UPDATE diary SET title=?, content=? WHERE id=?', [req.body.title, req.body.content, req.body.id], function(err, result){
+        if(err) {throw err;}
+        res.redirect(`/diary/${req.body.id}`);
+    })
+});
+
 app.post('/delete_process', function(req, res){
     db.query('DELETE FROM diary WHERE id=?', [req.body.diaryId], function(err, result){
         if(err) {throw err;}

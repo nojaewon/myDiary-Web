@@ -1,0 +1,19 @@
+extend ./main_template.pug
+
+block style
+    include ../css/create.css
+
+block content 
+    div(class="wrap")
+        form(action="/update_process" method="post")
+            fieldset 
+                legend @Fill Your Day@
+                ul 
+                    li
+                        label(for="title")
+                        input(name="title" type="text" id="title" placeholder="title" value=`${curDiary.title}`)
+                    li
+                        label(for="description")
+                        textarea(name="content" id="description" cols="30" rows="10") #{curDiary.content}
+                input(type="hidden" name="id" value=`${curDiary.id}`)
+                input(type="submit" value="Update Diray")

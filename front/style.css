@@ -16,10 +16,25 @@
     margin: 0 auto;
 }
 
-#header {width: 100%; height: 10%; float: left; background-color: #aaa;}
-#side {width: 20%; height: 70%; float: left; background-color: #bbb;}
-#content {width: 80%; height: 70%; float: left; background-color: #ccc;}
+#header {width: 100%; height: 10%; float: left;    background-color: #D9B5A7;}
+#side {width: 20%; height: 70%; float: left; background-color: #8C7E7D;}
+#content {width: 80%; height: 70%; float: left; background-color: #D9B0A7;}
 #footer {width: 100%; height: 20%; float: left; background-color: #ddd;}
+
+/* header */
+#header h1.title {
+    width: 20%; height: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+#header h1.title span:nth-child(1) {
+    color: #261511;
+}
+
+#header h1.title span:nth-child(2) {
+    color: #BF5E5E;
+}
 
 
 /* side */
@@ -37,11 +52,10 @@
     line-height: 40px;
     text-decoration: none;
     text-align: center;
-    background-color: thistle;
-    color: #000;
+    color: white;
 }
 #side .menu li a:hover {
-    color : white;
+    background: rgba(0,0,0,0.1);
 }
 
 

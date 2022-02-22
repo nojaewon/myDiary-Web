@@ -5,8 +5,10 @@ block style
 
 block content 
     .wrap
-        h2(class="title") #{curDiary.title} 
+        h2(class="title") #{curDiary.title}
+        hr
         p(class="description") #{curDiary.content}
+        a(class="update" href=`/update/${curDiary.id}`) update
         form(action="/delete_process" method="post")
             input(type="hidden" name= "diaryId" value=`${curDiary.id}`)
             input(type="submit" value="Delete")
